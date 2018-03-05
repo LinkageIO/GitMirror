@@ -8,13 +8,16 @@ RUN apt-get -y update && apt-get install -y \
         git \
         gcc \
         build-essential \
-        python3
+        python3 
+
+RUN apt-get install -y python3-pip 
+RUN pip3 install setuptools
 
 RUN mkdir -p /src/ && \
     cd /src/ && \
     git clone https://github.com/LinkageIO/GitMirror.git && \
     cd GitMirror/ && \
-    python setup.py install
+    python3 setup.py install
 
 WORKDIR /root
 

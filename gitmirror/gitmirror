@@ -8,7 +8,10 @@ app = Flask(__name__)
 @app.route("/",methods=['POST'])
 def echo():
     json = request.get_json()
-    pprint(json)
+    repo_name = json['repository']['name']
+    repo_url = json['repository']['git_url']
+    print('{} just got updated! {}'.format(repo_name,repo_url))
+    #pprint(json)
     return jsonify([])
 
 if __name__ == '__main__':

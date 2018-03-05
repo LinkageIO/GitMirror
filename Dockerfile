@@ -11,7 +11,7 @@ RUN apt-get -y update && apt-get install -y \
         python3 
 
 RUN apt-get install -y python3-pip 
-RUN pip3 install setuptools
+RUN pip3 install setuptools flask pprint
 
 RUN mkdir -p /src/ && \
     cd /src/ && \
@@ -21,4 +21,4 @@ RUN mkdir -p /src/ && \
 
 WORKDIR /root
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/src/GitMirror/gitmirror/gitmirror"]

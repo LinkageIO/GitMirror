@@ -21,4 +21,4 @@ RUN mkdir -p /src/ && \
 
 WORKDIR /root
 
-ENTRYPOINT ["/src/GitMirror/gitmirror/gitmirror"]
+ENTRYPOINT ["gitmirror"]

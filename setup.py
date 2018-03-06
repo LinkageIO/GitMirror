@@ -26,6 +26,8 @@ setup(
     version = find_version('gitmirror','__init__.py'),
     packages = find_packages(),
     scripts = [
+        'gitmirror/pushEGGL.sh',
+        'gitmirror/gitmirror'
     ],
     ext_modules = [],
     cmdclass = {

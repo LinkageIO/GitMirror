@@ -11,7 +11,16 @@ def echo():
     repo_name = json['repository']['name']
     repo_url = json['repository']['git_url']
     print('{} just got updated! {}'.format(repo_name,repo_url))
-    #pprint(json)
+    cmd = "pushEGGL {} {}".format(repo_name,repo_url)
+    # Pass the info to the bash script 
+    try:
+        p = Popen(cmd,stdout=sys.stdout, stderr=sys.stderr, shell=True)
+        p.wait()
+        if p.returncode != 0:
+            print('Could not update the mirror for {}'.format(repo_name))
+    except Exception as e:
+        print('Could not update the mirror for {}: {}'.format(repo_name,e))
+
     return jsonify([])
 
 if __name__ == '__main__':

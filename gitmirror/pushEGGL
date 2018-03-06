@@ -2,7 +2,9 @@
 
 NAME=$1
 REPO=$2
-MIRROR_ORG="UMN-Equine-Lab"
+
+
+# NOTE: the env variables for MIRROR_ORG and GITHUBTOKEN need to be set.
 
 cd $HOME
 mkdir -p Codes && cd Codes

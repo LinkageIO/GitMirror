@@ -1,5 +1,7 @@
 # GitMirror
-A microservice to mirror github repositories. The microservice is implemented as a docker container and is activated by a Github webhook that is fired whenever you push to your repository. This is useful for use cases such as mirroring your public github repositories with an Enterprise version of github (perhaps offered by your work or university).
+A microservice to mirror github repositories.
+---------------------------------------------
+The microservice is implemented as a docker container and is activated by a Github webhook that is fired whenever you push to your repository. This is useful for use cases such as mirroring your public github repositories with an Enterprise version of github (perhaps offered by your work or university).
 
 For clarity, assume you work on a main repository (REPO_A). A mirror repository (REPO_B) will be created and automagically updated when you push to REPO_A.
 
